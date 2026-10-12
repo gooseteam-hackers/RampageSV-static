@@ -1,1 +1,8 @@
-stub
+{
+  "version": "1.0",
+  "version_code": 1,
+  "changelog": "• первый релиз",
+  "apk_url": "https://github.com/gooseteam-hackers/RampageSV-Android/releases/download/1/RampageSV-Android-release-1.0.apk",
+  "services_url": "https://raw.githubusercontent.com/gooseteam-hackers/RampageSV-static/refs/heads/main/services.json",
+  "optional": true
+}
